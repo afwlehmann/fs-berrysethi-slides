@@ -1,0 +1,43 @@
+digraph G {
+
+  #ranksep=0.3;
+  nodesep=0.4;
+  node [fontname="Arial"]
+
+  q0 -> q1 [style=invis];
+  #q0 -> sepq1q5 [style=invis];
+  #sepq1q5 [style=invis];
+  q0 -> q4 [style=invis];
+  q1 -> q3 [style=invis];
+  q2 -> q0 [style=invis];
+  q2 -> q5 [style=invis];
+
+
+  q3 -> q6;
+  q3 -> q7;
+  q5 -> q8 [style=invis];
+  #q5 -> sepq8q9 [style=invis];
+  #sepq8q9 [style=invis];
+  q5 -> q9 [style=invis];
+  q8 -> q10;
+  q8 -> q11;
+  q9 -> q12 [style=invis];
+
+  q0 [label="●"; style=invis];
+  q1 [label="*"; style=invis];
+  q2 [label="●"; style=invis];
+  q3 [label="|"];
+  q4 [shape=square, label="a"];
+  q5 [label="●"; style=invis];
+  q6 [shape=square, label="a"];
+  q7 [shape=square, label="b"];
+  q8 [label="|"];
+  q9 [label="?", style=invis];
+  q10 [shape=square, label="a"];
+  q11 [shape=square, label="b"];
+  q12 [shape=square, label="b"];
+
+  { rank=same; q6; q7; q4; q10; q11; q12 }
+  { rank=same; q1 }
+
+}

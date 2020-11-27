@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in aux/*.dot; do
+    dot -Tsvg $i | convert -density 300 svg:- ${i/.dot/.jpg}
+done
